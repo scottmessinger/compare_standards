@@ -13,6 +13,7 @@ body {
 	min-height: 100%;
 	width: 960px;
 	overflow: auto;
+	padding: 0 20px;
 	background-color: #e0e0e0;
 	-moz-box-shadow: 0 0 30px #666666;
 	-webkit-box-shadow: 0 0 30px #666666;
@@ -23,7 +24,13 @@ body {
 
 #wrapper #navigation {
 	padding: 40px;
-	
+	text-align: center;
+}
+
+#wrapper #navigation ul {
+	width: 614px;
+	margin: 0 auto;
+	border: 1px solid #000;
 }
 
 #wrapper #navigation ul li {
@@ -31,11 +38,28 @@ body {
 	list-style-type: none;
 }
 
-#wrapper #navigation .grade {
-	
+#wrapper #navigation ul li.current {
+	background-color: #b0b0b0;
 	
 }
 
-#wrapper #navigation .curriculum {
+#wrapper #navigation ul.grade {
+}
+
+#wrapper #navigation ul.grade li:first-child {
+	color: #FFF;
+	background-color: #000;
+}
+
+#wrapper #navigation ul.grade li {
+	padding: 1px 20px;
 	
+}
+
+#wrapper #navigation ul.curriculum {
+}
+
+#wrapper #navigation ul.curriculum li {
+	padding: 0 77px;
+	text-align: center;
 }
