@@ -268,3 +268,10 @@ Rendering template within layouts/main
 Rendering main/index
 Rendered layouts/_topnav (0.1ms)
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-06-22 21:31:41) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered layouts/_topnav (0.5ms)
+Completed in 27ms (View: 26, DB: 0) | 200 OK [http://localhost/]
