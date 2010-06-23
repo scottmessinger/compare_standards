@@ -1,13 +1,13 @@
 class Maryland
   include MongoMapper::Document
   
-  key :type, String
-  key :label, String
-  key :standard, String
-  key :topic, String
-  key :indicator, String
-  key :objective, String
-  key :assessment_limit, String
+  key :standard_number, String #this is the label used by educators to describe the standard. e.g. 3.A.1.c
+  key :grade, Integer 
+  key :level_0, String #standard
+  key :level_1, String #topic
+  key :level_2, String #indicator
+  key :level_3, String #objective
+  key :level_4, String #assessment limit
   
   key :related_cc_array, Array
   
