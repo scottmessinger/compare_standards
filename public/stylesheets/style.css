@@ -1,0 +1,41 @@
+html { background-color:inherit; height:100%; }
+
+body { 
+	height:100%;
+	font-family: Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	font-size: 18px;
+	background-color: #b0b0b0;
+}
+
+#wrapper {
+	margin: 0 auto 30px;
+	position: relative;
+	min-height: 100%;
+	width: 960px;
+	overflow: auto;
+	background-color: #e0e0e0;
+	-moz-box-shadow: 0 0 30px #666666;
+	-webkit-box-shadow: 0 0 30px #666666;
+	box-shadow: 0 0 30px #666666;
+}
+
+/** NAVIGATION AREA **/
+
+#wrapper #navigation {
+	padding: 40px;
+	
+}
+
+#wrapper #navigation ul li {
+	display: inline;
+	list-style-type: none;
+}
+
+#wrapper #navigation .grade {
+	
+	
+}
+
+#wrapper #navigation .curriculum {
+	
+}
