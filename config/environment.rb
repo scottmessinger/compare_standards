@@ -19,7 +19,9 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-
+  config.gem 'mongo', :version => "1.0.0"
+  config.gem 'formtastic'
+  config.gem 'haml', :version => '>=2.2.22'
   config.gem "mongo_mapper", :version => '0.8.2'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
