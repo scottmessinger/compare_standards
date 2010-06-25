@@ -4,3 +4,4 @@ mongo_mapper
 formtastic
 haml
 oauth
+ezcrypto
