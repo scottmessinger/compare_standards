@@ -1,3 +1,4 @@
 config/mongodb.yml
 log/*.log
 *.swp
+config/twitter_auth.yml
