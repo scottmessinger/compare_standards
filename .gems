@@ -3,3 +3,4 @@ mongo
 mongo_mapper
 formtastic
 haml
+oauth
