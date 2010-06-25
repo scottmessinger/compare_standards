@@ -1,3 +1,2 @@
-config/mongodb.yml
 log/*.log
 *.swp
