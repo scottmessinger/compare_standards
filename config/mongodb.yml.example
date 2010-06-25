@@ -1,0 +1,18 @@
+base: &base
+ adapter: 
+ host: 
+ port: 
+ username: 
+ password: 
+
+development:
+ <<: *base
+ database: compare_standards_dev
+
+test:
+ <<: *base
+ database: compare_standards_test
+
+production:
+ <<: *base
+ database: compare_standards
