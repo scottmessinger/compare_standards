@@ -1,0 +1,9 @@
+--- 
+javascripts: 
+- base: 
+  - application
+  - jquery.treeview.pack
+  - jquery.cookie
+stylesheets: 
+- base: 
+  - jquery.treeview
