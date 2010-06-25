@@ -20,7 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'mongo'
-  config.gem "mongo_mapper" , :version => '>=0.8.2'
+  config.gem "mongo_mapper" , :version => "0.8.2"
   config.gem 'formtastic'
   config.gem 'haml', :version => '>=2.2.22'
 

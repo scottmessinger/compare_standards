@@ -9,10 +9,10 @@ class Maryland
   key :level_3, Array #objective
   key :level_4, Array #assessment limit
   
-  key :related_cc_array, Array
+  key :related_cores, Array
   
   key :perfect_alignment, Boolean #1 = true, 0=false
   key :common_core_alignment_note, String
   
-  many :common_cores, :in => :related_cc_array
+  many :common_cores, :in => :related_cores
 end
