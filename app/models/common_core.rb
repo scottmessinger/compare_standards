@@ -8,6 +8,5 @@ class CommonCore
   key :level_2, Array
   key :level_3_array, Array
   
-  # many :marylands
 
 end
