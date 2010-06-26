@@ -1,0 +1,52 @@
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+@import compass/reset
+@import 960/grid.sass
+
+html
+  background-color: inherit
+  height: 100%
+
+body
+  height: 100%
+  font-family: Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
+  font-size: 18px
+  background-color: #b0b0b0
+
+#wrapper
+  margin: 0 auto 30px
+  position: relative
+  min-height: 100%
+  width: 960px
+  overflow: auto
+  padding: 0 20px
+  background-color: #ffffff
+  -moz-box-shadow: 0 0 30px #666666
+  -webkit-box-shadow: 0 0 30px #666666
+  box-shadow: 0 0 30px #666666
+  #navigation
+    padding: 40px
+    text-align: center
+    ul
+      width: 614px
+      margin: 0 auto
+      border: 1px solid #000
+      li
+        display: inline
+        list-style-type: none
+        &.current
+          background-color: #b0b0b0
+      &.grade li
+        &:first-child
+          color: #FFF
+          background-color: #000
+        padding: 1px 20px
+      &.curriculum li
+        padding: 0 77px
+        text-align: center
+
+/** NAVIGATION AREA *

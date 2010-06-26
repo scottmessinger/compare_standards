@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "mongo_mapper" , :version => "0.8.2"
   config.gem 'formtastic'
   config.gem 'haml', :version => '>=2.2.22'
+  config.gem "compass", :version => ">= 0.10.2"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
