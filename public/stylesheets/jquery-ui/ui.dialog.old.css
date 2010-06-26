@@ -1,0 +1,75 @@
+/* Dialog
+ * ---------------------------------- */
+/* line 4, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog {
+  position: relative;
+  padding: 0.2em;
+  width: 300px;
+}
+/* line 9, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.5em 0.3em 0.3em 1em;
+  position: relative;
+}
+/* line 13, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-title {
+  float: left;
+  margin: 0.1em 0 0.2em;
+}
+/* line 17, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-titlebar-close {
+  position: absolute;
+  right: 0.3em;
+  top: 50%;
+  width: 19px;
+  margin: -10px 0 0 0;
+  padding: 1px;
+  height: 18px;
+}
+/* line 26, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-titlebar-close span {
+  display: block;
+  margin: 1px;
+}
+/* line 30, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus {
+  padding: 0;
+}
+/* line 33, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-content {
+  border: 0;
+  padding: 0.5em 1em;
+  background: none;
+  overflow: auto;
+  zoom: 1;
+}
+/* line 40, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-buttonpane {
+  text-align: left;
+  border-width: 1px 0 0 0;
+  background-image: none;
+  margin: 0.5em 0 0 0;
+  padding: 0.3em 1em 0.5em 0.4em;
+}
+/* line 47, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-dialog-buttonpane button {
+  float: right;
+  margin: 0.5em 0.4em 0.5em 0;
+  cursor: pointer;
+  padding: 0.2em 0.6em 0.3em 0.6em;
+  line-height: 1.4em;
+  width: auto;
+  overflow: visible;
+}
+/* line 56, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-dialog .ui-resizable-se {
+  width: 14px;
+  height: 14px;
+  right: 3px;
+  bottom: 3px;
+}
+
+/* line 63, ../../../app/stylesheets/jquery-ui/ui.dialog.old.sass */
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move;
+}

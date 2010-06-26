@@ -1,0 +1,93 @@
+/* jQuery UI CSS Framework
+ * Copyright (c) 2010 AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses. */
+/* Layout helpers
+ * ---------------------------------- */
+/* line 9, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-hidden {
+  display: none;
+}
+
+/* line 12, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-hidden-accessible {
+  position: absolute;
+  left: -99999999px;
+}
+
+/* line 16, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+
+/* line 26, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-clearfix {
+  display: inline-block;
+}
+/* line 27, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* required comment for clearfix to work in Opera \ */
+/* line 37, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+* html .ui-helper-clearfix {
+  height: 1%;
+}
+
+/* line 40, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-clearfix {
+  display: block;
+}
+
+/* end clearfix */
+/* line 45, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity=0);
+}
+
+/* Interaction Cues
+ * ---------------------------------- */
+/* line 57, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+/* Icons
+ * ---------------------------------- */
+/* states and images */
+/* line 65, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+/* Misc visuals
+ * ---------------------------------- */
+/* Overlays */
+/* line 76, ../../../app/stylesheets/jquery-ui/ui.core.sass */
+.ui-widget-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

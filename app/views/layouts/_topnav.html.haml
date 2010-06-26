@@ -1,0 +1,28 @@
+:javascript
+  jQuery(function()
+    {
+      jQuery("#grade").buttonset();
+    });
+  
+  
+#navigation
+  %span#grade
+    %input{:type => 'radio', :name => 'grade', :id => 'K'}
+    %label{:for => 'K'} K
+    %input{:type => 'radio', :name => 'grade', :id => '1st'}
+    %label{:for => '1st'} 1st
+    %input{:type => 'radio', :name => 'grade', :id => '2nd'}
+    %label{:for => '2nd'} 2nd
+    
+
+    %li 1
+    %li.current 2
+    %li 3
+    %li 4
+    %li 5
+    %li 6
+    %li 7
+    %li 8
+  %ul.curriculum
+    %li Maryland Stuff
+    %li.current Common Curriculum
