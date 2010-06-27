@@ -2102,33 +2102,14 @@ body {
   text-align: center;
 }
 /* line 34, ../../app/stylesheets/screen.sass */
-#wrapper #navigation ul {
-  width: 614px;
-  margin: 0 auto;
-  border: 1px solid black;
+#wrapper #navigation .button_set {
+  text-align: left;
 }
-/* line 38, ../../app/stylesheets/screen.sass */
-#wrapper #navigation ul li {
-  display: inline;
-  list-style-type: none;
-}
-/* line 41, ../../app/stylesheets/screen.sass */
-#wrapper #navigation ul li.current {
-  background-color: #b0b0b0;
-}
-/* line 43, ../../app/stylesheets/screen.sass */
-#wrapper #navigation ul.grade li {
-  padding: 1px 20px;
-}
-/* line 44, ../../app/stylesheets/screen.sass */
-#wrapper #navigation ul.grade li:first-child {
-  color: white;
-  background-color: black;
-}
-/* line 48, ../../app/stylesheets/screen.sass */
-#wrapper #navigation ul.curriculum li {
-  padding: 0 77px;
-  text-align: center;
+/* line 36, ../../app/stylesheets/screen.sass */
+#wrapper #navigation .button_set .label {
+  width: 120px;
+  text-align: right;
+  display: inline-block;
 }
 
 /*NAVIGATION AREA * */
