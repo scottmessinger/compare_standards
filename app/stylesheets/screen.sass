@@ -7,6 +7,14 @@
 @import compass/reset
 @import 960/grid.sass
 @import jquery-ui/ui.all.sass
+@import compass/css3/border-radius
+
+!state_bg_color = 'FF7700'
+!grade_bg_color = 'FFBC08'
+!hover_color = '666666'
+!default_color = '000'
+!active_color = 'fff'
+!focus_color = 'fff'
 html
 	background-color: inherit
 	height: 100%
@@ -40,12 +48,18 @@ body
 		padding-top: 20px
 		span
 			&#grade, &#state
-				background-color: #666666
 				padding: 10px 5px 5px 5px
 				cursor: pointer
+				+border-radius(10px)
+			&#grade
+				background-color: !grade_bg_color
+			&#state
+				background-color: !state_bg_color
+				
+				
 
 			&.hidden
-				color: #666666
+				color: !state_bg_color
 				
 	form, #navigation
 		text-align: center
@@ -53,8 +67,26 @@ body
 			text-align: left
 			display: none
 			position: absolute
+			&#states
+				background-color: !state_bg_color
+			&#grades
+				background-color: !grade_bg_color
+				
 			.label
 				width: 120px
 				text-align: right
 				display: inline-block
+			label
+				&.ui-button
+					background-color: inherit
+					border: 0px
+				&.ui-state-default
+					color: !default_color
+				&.ui-state-hover
+					color: !hover_color
+				&.ui-state-active
+					color: !active_color
+				&.ui-focus-active
+					color: !focus_color
+					
 /** NAVIGATION AREA *
