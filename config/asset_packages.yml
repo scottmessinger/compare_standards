@@ -9,4 +9,3 @@ stylesheets:
 - base: 
   - jquery.treeview
   - screen
-  - jquery-ui
