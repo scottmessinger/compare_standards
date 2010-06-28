@@ -5,7 +5,7 @@ class CurriculumsController < ApplicationController
   
   def show
     if(params[:state])
-      @maryland = params[:state].classify.constantize.all
+      @state = params[:state].classify.constantize.all
     end
   end
 end
