@@ -4,6 +4,9 @@ javascripts:
   - jquery
   - application
   - jquery.treeview
+  - jquery-ui-1.8.custom
 stylesheets: 
 - base: 
   - jquery.treeview
+  - screen
+  - jquery-ui
