@@ -1,0 +1,28 @@
+%h1
+  =@state
+-@state_standards.group_by(&:grade).each do |grade, rest|
+  %h2
+  %p="Grade: #{grade}"
+  %h3
+  -rest.group_by(&:level_0).each do |level_0, rest|
+    .filetree.treeview
+      %ul
+        %li
+          =level_0[0]
+          =level_0[1]
+          -rest.group_by(&:level_1).each do |level_1, rest|
+            %ul 
+              %li
+                =level_1[0]
+                =level_1[1]
+                -rest.group_by(&:level_2).each do |level_2, rest|
+                  %ul
+                    %li
+                      =level_2[0]
+                      =level_2[1]
+                      -rest.group_by(&:level_3_array).each do |level_3_array, rest|
+                        %ul
+                          -level_3_array.each do |level_3|
+                            %li
+                              =level_3
+ 
