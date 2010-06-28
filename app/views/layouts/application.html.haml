@@ -8,12 +8,14 @@
   = javascript_include_merged(:base) 
   = stylesheet_link_tag 'screen.css'
   = javascript_include_tag 'jquery'
+  = javascript_include_tag 'http://use.typekit.com/yuw6qmk.js'
 
   :erb
     <script src="http://www.google.com/jsapi?key=ABQIAAAAwMGM5ffHbRkfompsxZzyhBRAq9ByDnCnKGDAy21ra59LiMlHbxTOAAdR4Lm-nIzv41bqQyq7HeRtzg" type="text/javascript"></script>
   :javascript
     google.load("jquery", "1.4.2");
     google.load("jqueryui", "1.8.2");
+    try{Typekit.load();}catch(e){};
 %body
   #wrapper
     #top_nav

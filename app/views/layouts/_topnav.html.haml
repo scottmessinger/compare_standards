@@ -1,14 +1,61 @@
 :javascript
+
   $(function()
     {
-      $("#grade").buttonset();
-      $("#state").buttonset();
-      $("#filter").buttonset();
+      $.fn.disableSelection = function() {
+          $(this).attr('unselectable', 'on')
+                 .css('-moz-user-select', 'none')
+                 .each(function() { 
+                     this.onselectstart = function() { return false; };
+                  });
+      };
+
+      $(".control_bar").disableSelection();
+    
+      
+      $("#grades").buttonset();
+      $("#states").buttonset();
+      $("#filters").buttonset();
       $("#navigation").submit(function (){
         $.post("/curriculums/show", $('form').serialize(), function(data) {
                $('#curriculum').html(data);
         });
         return false;
+      });
+      
+      $("input[name=state]:radio").each(function(i){
+            $(this).click(function(){
+                  $("#state").text($(this).attr("label"));
+                  $("#states.button_set").toggle();
+                  $("#state").removeClass('hidden');
+              });
+        });
+        
+      
+      $("#state").click(function(){
+        if ($("#grades:visible")){
+          $("#grades").hide();
+          $("#grade").removeClass('hidden');
+        }
+        var pos = $(this).position();
+        var width = $(this).width();
+        var button_set_width = $("#states").width()
+        var button_left = width/2 + pos.left - button_set_width/2;
+        $("#states").css('left', button_left + 'px').toggle();
+        $(this).toggleClass('hidden')
+      });
+
+      $("#grade").click(function(){
+        if ($("#states:visible")){
+          $("#states").hide();
+          $("#state").removeClass('hidden');
+        }
+        var pos = $(this).position();
+        var width = $(this).width();
+        var button_set_width = $("#grades").width()
+        var button_left = width/2 + pos.left - button_set_width/1.5;
+        $("#grades").css('left', button_left + 'px').toggle();
+        $(this).toggleClass('hidden');
       });
       
       
@@ -18,11 +65,20 @@
 / );
 
 
+.title.tk-adelle
+  Compare Standards
+
+.control_bar
+  I want to view
+  %span#state.select_button
+    Maryland
+  standards for 
+  %span#grade.select_button
+    3rd
+  grade. 
 
 -form_for :curriculum, :html => {:id => "navigation"}, :url => {:action => "show"} do
-  #grade.button_set
-    .label
-      Select Grade:
+  #grades.button_set
     %input{:type => 'radio', :name => 'grade', :id => 'K', :value => 'K'}
     %label{:for => 'K'} K
     %input{:type => 'radio', :name => 'grade', :id => '1', :value => '1'}
@@ -41,14 +97,12 @@
     %label{:for => '7'} 7th
     %input{:type => 'radio', :name => 'grade', :id => '8', :value => '8'}
     %label{:for => '8'} 8th
-  #state.button_set
-    .label
-      Select Standards:
-    %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland'}
+  #states.button_set
+    %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland', :label => 'Maryland'}
     %label{:for => 'maryland'} Maryland
-    %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core'}
+    %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core', :label => 'Common Core'}
     %label{:for => 'common'}Common Core
-  #filter.button_set
+  #filters.button_set
     .label
       
     /   %input{:type => 'radio', :name => 'filter', :id => 'stand_alone', :value => 'stand_alone'}
