@@ -2097,16 +2097,16 @@ body {
   box-shadow: 0 0 30px #666666;
 }
 /* line 31, ../../app/stylesheets/screen.sass */
-#wrapper #navigation {
+#wrapper form, #wrapper #navigation {
   padding: 40px;
   text-align: center;
 }
 /* line 34, ../../app/stylesheets/screen.sass */
-#wrapper #navigation .button_set {
+#wrapper form .button_set, #wrapper #navigation .button_set {
   text-align: left;
 }
 /* line 36, ../../app/stylesheets/screen.sass */
-#wrapper #navigation .button_set .label {
+#wrapper form .button_set .label, #wrapper #navigation .button_set .label {
   width: 120px;
   text-align: right;
   display: inline-block;
