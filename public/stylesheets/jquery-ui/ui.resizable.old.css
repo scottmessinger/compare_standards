@@ -1,0 +1,91 @@
+/* Resizable
+ * ---------------------------------- */
+/* line 4, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable {
+  position: relative;
+}
+
+/* line 7, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  z-index: 99999;
+  display: block;
+}
+
+/* line 13, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+
+/* line 16, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-n {
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0px;
+}
+
+/* line 23, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0px;
+}
+
+/* line 30, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0px;
+  height: 100%;
+}
+
+/* line 37, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0px;
+  height: 100%;
+}
+
+/* line 44, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
+}
+
+/* line 51, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px;
+}
+
+/* line 58, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px;
+}
+
+/* line 65, ../../../app/stylesheets/jquery-ui/ui.resizable.old.sass */
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px;
+}

@@ -26,6 +26,8 @@ Rails::Initializer.run do |config|
   config.gem 'json', :version => '1.4.3'
   config.gem 'oauth', :version => '0.4.1'
   config.gem 'ezcrypto', :version => '0.7.2'
+  config.gem "compass", :version => ">= 0.10.2"
+
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

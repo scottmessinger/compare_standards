@@ -1,0 +1,12 @@
+/* Progressbar
+ * ---------------------------------- */
+/* line 3, ../../../app/stylesheets/jquery-ui/ui.progressbar.sass */
+.ui-progressbar {
+  height: 2em;
+  text-align: left;
+}
+/* line 7, ../../../app/stylesheets/jquery-ui/ui.progressbar.sass */
+.ui-progressbar .ui-progressbar-value {
+  margin: -1px;
+  height: 100%;
+}

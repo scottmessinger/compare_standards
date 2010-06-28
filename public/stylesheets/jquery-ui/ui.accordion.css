@@ -1,0 +1,43 @@
+/* Accordion
+ * ---------------------------------- */
+/* line 5, ../../../app/stylesheets/jquery-ui/ui.accordion.sass */
+.ui-accordion .ui-accordion-header {
+  cursor: pointer;
+  position: relative;
+  margin-top: 1px;
+  zoom: 1;
+  padding-left: 2.2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 18, ../../../app/stylesheets/jquery-ui/ui.accordion.sass */
+.ui-accordion .ui-accordion-header .ui-icon {
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  margin-top: -8px;
+}
+/* line 24, ../../../app/stylesheets/jquery-ui/ui.accordion.sass */
+.ui-accordion .ui-accordion-li-fix {
+  display: inline;
+}
+/* line 27, ../../../app/stylesheets/jquery-ui/ui.accordion.sass */
+.ui-accordion .ui-accordion-header-active {
+  border-bottom: 0 !important;
+}
+/* line 30, ../../../app/stylesheets/jquery-ui/ui.accordion.sass */
+.ui-accordion .ui-accordion-content {
+  border-top: 0;
+  margin-top: -2px;
+  position: relative;
+  top: 1px;
+  margin-bottom: 2px;
+  overflow: auto;
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 43, ../../../app/stylesheets/jquery-ui/ui.accordion.sass */
+.ui-accordion .ui-accordion-content-active {
+  display: block;
+}

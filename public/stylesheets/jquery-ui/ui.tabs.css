@@ -1,0 +1,56 @@
+/* Tabs
+ * ----------------------------------- */
+/* line 3, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs {
+  padding: 0.2em;
+  zoom: 1;
+}
+/* line 7, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-nav {
+  list-style: none;
+  position: relative;
+  padding: 0.2em 0.2em 0;
+}
+/* line 12, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-nav li {
+  position: relative;
+  float: left;
+  border-bottom-width: 0 !important;
+  margin: 0 0.2em -1px 0;
+  padding: 0;
+}
+/* line 19, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-nav li a {
+  float: left;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+/* line 25, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  padding-bottom: 1px;
+  border-bottom-width: 0;
+}
+/* line 29, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: text;
+}
+/* line 32, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+  cursor: text;
+}
+/* line 35, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: pointer;
+}
+/* line 38, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-panel {
+  padding: 1em 1.4em;
+  display: block;
+  border-width: 0;
+  background: none;
+}
+/* line 44, ../../../app/stylesheets/jquery-ui/ui.tabs.sass */
+.ui-tabs .ui-tabs-hide {
+  display: none !important;
+}

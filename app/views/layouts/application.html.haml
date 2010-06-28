@@ -6,7 +6,17 @@
   %meta{:name => "description", :content => "UTF-8" }
   = stylesheet_link_merged(:base)
   = javascript_include_merged(:base) 
+  = stylesheet_link_tag 'screen.css'
+  = javascript_include_tag 'jquery'
+
+  :erb
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAwMGM5ffHbRkfompsxZzyhBRAq9ByDnCnKGDAy21ra59LiMlHbxTOAAdR4Lm-nIzv41bqQyq7HeRtzg" type="text/javascript"></script>
+  :javascript
+    google.load("jquery", "1.4.2");
+    google.load("jqueryui", "1.8.2");
 %body
   #wrapper
+    #top_nav
+      = render :partial => 'layouts/topnav'
     = yield 
 
