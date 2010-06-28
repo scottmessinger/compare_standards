@@ -8,5 +8,7 @@ class CurriculumsController < ApplicationController
       @state_standards = params[:state].classify.constantize.all
       @state = params[:state].capitalize
     end
+    render "#{@state.to_s.downcase}", :layout => false
+    
   end
 end

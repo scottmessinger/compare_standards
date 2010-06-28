@@ -3,54 +3,57 @@
     {
       $("#grade").buttonset();
       $("#state").buttonset();
-
-
       $("#filter").buttonset();
-
-
+      $("#navigation").submit(function (){
+        $.post("/curriculums/show", $('form').serialize(), function(data) {
+               $('#curriculum').html(data);
+        });
+        return false;
+      });
+      
       
     });
 / $(':radio').change(
 /   $("#navigation").submit()
 / );
 
-  
--form_for :curriculum, :url => {:action => "show"} do
-  %form#navigation{:action => "/maryland", :method => "post"}
-    #grade.button_set
-      .label
-        Select Grade:
-      %input{:type => 'radio', :name => 'grade', :id => 'K', :value => 'K'}
-      %label{:for => 'K'} K
-      %input{:type => 'radio', :name => 'grade', :id => '1', :value => '1'}
-      %label{:for => '1'} 1st
-      %input{:type => 'radio', :name => 'grade', :id => '2', :value => '2'}
-      %label{:for => '2'} 2nd
-      %input{:type => 'radio', :name => 'grade', :id => '3', :value => '3'}
-      %label{:for => '3'} 3rd
-      %input{:type => 'radio', :name => 'grade', :id => '4', :value => '4'}
-      %label{:for => '4'} 4th
-      %input{:type => 'radio', :name => 'grade', :id => '5', :value => '5'}
-      %label{:for => '5'} 5th
-      %input{:type => 'radio', :name => 'grade', :id => '6', :value => '6'}
-      %label{:for => '6'} 6th
-      %input{:type => 'radio', :name => 'grade', :id => '7', :value => '7'}
-      %label{:for => '7'} 7th
-      %input{:type => 'radio', :name => 'grade', :id => '8', :value => '8'}
-      %label{:for => '8'} 8th
-    #state.button_set
-      .label
-        Select State:
-      %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland'}
-      %label{:for => 'maryland'} Maryland
-      %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core'}
-      %label{:for => 'common'}Common Core
-    #filter.button_set
-      .label
-        Select Filter:
-      %input{:type => 'radio', :name => 'filter', :id => 'stand_alone', :value => 'stand_alone'}
-      %label{:for => 'stand_alone'} By Itself
-      %input{:type => 'radio', :name => 'filter', :id => 'comparison', :value => 'comparison'}
-      %label{:for => 'comparison'} Comparison
-    %button
-      submit
+
+-form_for :curriculum, :html => {:id => "navigation"}, :url => {:action => "show"} do
+  #grade.button_set
+    .label
+      Select Grade:
+    %input{:type => 'radio', :name => 'grade', :id => 'K', :value => 'K'}
+    %label{:for => 'K'} K
+    %input{:type => 'radio', :name => 'grade', :id => '1', :value => '1'}
+    %label{:for => '1'} 1st
+    %input{:type => 'radio', :name => 'grade', :id => '2', :value => '2'}
+    %label{:for => '2'} 2nd
+    %input{:type => 'radio', :name => 'grade', :id => '3', :value => '3'}
+    %label{:for => '3'} 3rd
+    %input{:type => 'radio', :name => 'grade', :id => '4', :value => '4'}
+    %label{:for => '4'} 4th
+    %input{:type => 'radio', :name => 'grade', :id => '5', :value => '5'}
+    %label{:for => '5'} 5th
+    %input{:type => 'radio', :name => 'grade', :id => '6', :value => '6'}
+    %label{:for => '6'} 6th
+    %input{:type => 'radio', :name => 'grade', :id => '7', :value => '7'}
+    %label{:for => '7'} 7th
+    %input{:type => 'radio', :name => 'grade', :id => '8', :value => '8'}
+    %label{:for => '8'} 8th
+  #state.button_set
+    .label
+      Select State:
+    %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland'}
+    %label{:for => 'maryland'} Maryland
+    %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core'}
+    %label{:for => 'common'}Common Core
+  #filter.button_set
+    .label
+      Select Filter:
+    %input{:type => 'radio', :name => 'filter', :id => 'stand_alone', :value => 'stand_alone'}
+    %label{:for => 'stand_alone'} By Itself
+    %input{:type => 'radio', :name => 'filter', :id => 'comparison', :value => 'comparison'}
+    %label{:for => 'comparison'} Comparison
+  %button.submit
+    submit
+#curriculum
