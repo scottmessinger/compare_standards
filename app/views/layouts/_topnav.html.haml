@@ -18,6 +18,7 @@
 / );
 
 
+
 -form_for :curriculum, :html => {:id => "navigation"}, :url => {:action => "show"} do
   #grade.button_set
     .label
@@ -42,18 +43,18 @@
     %label{:for => '8'} 8th
   #state.button_set
     .label
-      Select State:
+      Select Standards:
     %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland'}
     %label{:for => 'maryland'} Maryland
     %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core'}
     %label{:for => 'common'}Common Core
   #filter.button_set
     .label
-      Select Filter:
-    %input{:type => 'radio', :name => 'filter', :id => 'stand_alone', :value => 'stand_alone'}
-    %label{:for => 'stand_alone'} By Itself
-    %input{:type => 'radio', :name => 'filter', :id => 'comparison', :value => 'comparison'}
-    %label{:for => 'comparison'} Comparison
+      
+    /   %input{:type => 'radio', :name => 'filter', :id => 'stand_alone', :value => 'stand_alone'}
+    /   %label{:for => 'stand_alone'} By Itself
+    %input{:type => 'checkbox', :name => 'filter', :id => 'comparison', :value => 'comparison'}
+    %label{:for => 'comparison'} Compare Standards!
   %button.submit
     submit
 #curriculum
