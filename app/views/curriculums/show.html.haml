@@ -6,8 +6,8 @@
   %h2
   %p="Grade: #{grade}"
   %h3
-  -rest.group_by(&:level_0).each do |level_0, rest|
-    .filetree.treeview
+  #browser.filetree.treeview
+    -rest.group_by(&:level_0).each do |level_0, rest|
       %ul
         %li
           =level_0[0]
