@@ -12,7 +12,6 @@
 
       $(".control_bar").disableSelection();
     
-      
       $("#grades").buttonset();
       $("#states").buttonset();
       $("#filters").buttonset();
@@ -23,14 +22,26 @@
         return false;
       });
       
+      
       $("input[name=state]:radio").each(function(i){
             $(this).click(function(){
-                  $("#state").text($(this).attr("label"));
+                  $("#state").text(
+                    $("label[for="+$(this).attr('id')+"]").text()
+                  );
                   $("#states.button_set").toggle();
                   $("#state").removeClass('hidden');
               });
         });
         
+      $("input[name=grade]:radio").each(function(i){
+            $(this).click(function(){
+                  $("#grade").text(
+                    $("label[for="+$(this).attr('id')+"]").text()
+                  );
+                  $("#grades.button_set").toggle();
+                  $("#grade").removeClass('hidden');
+              });
+      });
       
       $("#state").click(function(){
         if ($("#grades:visible")){
@@ -76,7 +87,6 @@
   %span#grade.select_button
     choose grade
   grade. 
-
 -form_for :curriculum, :html => {:id => "navigation"}, :url => {:action => "show"} do
   #grades.button_set
     %input{:type => 'radio', :name => 'grade', :id => 'K', :value => 'K'}
@@ -110,5 +120,7 @@
     %input{:type => 'checkbox', :name => 'filter', :id => 'comparison', :value => 'comparison'}
     %label{:for => 'comparison'} Compare Standards!
   %button.submit
-    submit
+    Go!
+
+
 #curriculum

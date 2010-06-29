@@ -53,20 +53,27 @@ body
 				+border-radius(10px)
 			&#grade
 				background-color: !grade_bg_color
+				&.hidden
+					color: !grade_bg_color
+				
 			&#state
 				background-color: !state_bg_color
+				&.hidden
+					color: !state_bg_color
 				
 				
 
-			&.hidden
-				color: !state_bg_color
+				
 				
 	form, #navigation
 		text-align: center
+
 		.button_set
 			text-align: left
 			display: none
 			position: absolute
+			padding: 10px
+			+border-radius(10px)
 			&#states
 				background-color: !state_bg_color
 			&#grades

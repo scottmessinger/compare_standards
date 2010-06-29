@@ -2124,55 +2124,66 @@ body {
   background-color: FFBC08;
 }
 /* line 56, ../../app/stylesheets/screen.sass */
+#wrapper .control_bar span#grade.hidden {
+  color: FFBC08;
+}
+/* line 59, ../../app/stylesheets/screen.sass */
 #wrapper .control_bar span#state {
   background-color: FF7700;
 }
 /* line 61, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar span.hidden {
+#wrapper .control_bar span#state.hidden {
   color: FF7700;
 }
-/* line 64, ../../app/stylesheets/screen.sass */
+/* line 68, ../../app/stylesheets/screen.sass */
 #wrapper form, #wrapper #navigation {
   text-align: center;
 }
-/* line 66, ../../app/stylesheets/screen.sass */
+/* line 71, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set, #wrapper #navigation .button_set {
   text-align: left;
   display: none;
   position: absolute;
+  padding: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
 }
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 77, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set#states, #wrapper #navigation .button_set#states {
   background-color: FF7700;
 }
-/* line 72, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set#grades, #wrapper #navigation .button_set#grades {
   background-color: FFBC08;
 }
-/* line 75, ../../app/stylesheets/screen.sass */
+/* line 82, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set .label, #wrapper #navigation .button_set .label {
   width: 120px;
   text-align: right;
   display: inline-block;
 }
-/* line 80, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-button, #wrapper #navigation .button_set label.ui-button {
   background-color: inherit;
   border: 0px;
 }
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 90, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-state-default, #wrapper #navigation .button_set label.ui-state-default {
   color: 000;
 }
-/* line 85, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-state-hover, #wrapper #navigation .button_set label.ui-state-hover {
   color: 666666;
 }
-/* line 87, ../../app/stylesheets/screen.sass */
+/* line 94, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-state-active, #wrapper #navigation .button_set label.ui-state-active {
   color: fff;
 }
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 96, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-focus-active, #wrapper #navigation .button_set label.ui-focus-active {
   color: fff;
 }
