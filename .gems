@@ -5,3 +5,5 @@ formtastic
 haml
 oauth
 ezcrypto
+compass-960-plugin
+bson_ext
