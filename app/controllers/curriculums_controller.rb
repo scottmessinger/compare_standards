@@ -4,9 +4,11 @@ class CurriculumsController < ApplicationController
   end
   
   def show
-    if(params[:state])
-      @state_standards = params[:state].classify.constantize.all
-      @state = params[:state].capitalize
+    state = params[:state]
+    grade = params[:grade].to_i
+    if state
+      @state_standards = state.classify.constantize.where(:grade => grade).sort(:standard_number).all
+      @state = state.capitalize
     end
     render "#{@state.to_s.downcase}", :layout => false
     
