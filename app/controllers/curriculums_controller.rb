@@ -10,7 +10,7 @@ class CurriculumsController < ApplicationController
       @state_standards = state.classify.constantize.where(:grade => grade).sort(:standard_number).all
       @state = state.capitalize
     end
-    render "#{@state.to_s.downcase}", :layout => false
+    render "#{@state.to_s.downcase}" #, :layout => false
     
   end
 end

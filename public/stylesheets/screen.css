@@ -2078,12 +2078,13 @@ html {
 /* line 22, ../../app/stylesheets/screen.sass */
 body {
   height: 100%;
-  font-family: "adelle-1", "adelle-2";
+  font-family: "museo-sans-1", "museo-sans-2";
+  font-weight: 100;
   font-size: 18px;
   background-color: #b0b0b0;
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 31, ../../app/stylesheets/screen.sass */
 #wrapper {
   margin: 0 auto 30px;
   position: relative;
@@ -2096,20 +2097,22 @@ body {
   -webkit-box-shadow: 0 0 30px #666666;
   box-shadow: 0 0 30px #666666;
 }
-/* line 41, ../../app/stylesheets/screen.sass */
-#wrapper .title {
+/* line 44, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .title {
   font-size: 60px;
   text-align: center;
   padding-top: 20px;
+  font-family: "adelle-1", "adelle-2";
 }
-/* line 45, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar {
+/* line 50, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .control_bar {
   font-size: 30px;
+  font-weight: 100;
   text-align: center;
   padding-top: 20px;
 }
-/* line 50, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar span#grade, #wrapper .control_bar span#state {
+/* line 56, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .control_bar span#grade, #wrapper #top_nav .control_bar span#state {
   padding: 10px 5px 5px 5px;
   cursor: pointer;
   -moz-border-radius: 10px;
@@ -2119,27 +2122,59 @@ body {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 54, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar span#grade {
+/* line 60, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .control_bar span#grade {
   background-color: FFBC08;
 }
-/* line 56, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar span#grade.hidden {
+/* line 62, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .control_bar span#grade.hidden {
   color: FFBC08;
 }
-/* line 59, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar span#state {
+/* line 65, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .control_bar span#state {
   background-color: FF7700;
 }
-/* line 61, ../../app/stylesheets/screen.sass */
-#wrapper .control_bar span#state.hidden {
+/* line 67, ../../app/stylesheets/screen.sass */
+#wrapper #top_nav .control_bar span#state.hidden {
   color: FF7700;
 }
-/* line 68, ../../app/stylesheets/screen.sass */
+/* line 72, ../../app/stylesheets/screen.sass */
+#wrapper #curriculum h1 {
+  font-family: "museo-sans-1", "museo-sans-2";
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 30px;
+  border-bottom: 1px 000 solid;
+}
+/* line 78, ../../app/stylesheets/screen.sass */
+#wrapper #curriculum h2 {
+  padding-top: 10px;
+  text-transform: none;
+  font-weight: bold;
+  margin-left: 30;
+}
+/* line 83, ../../app/stylesheets/screen.sass */
+#wrapper #curriculum h3 {
+  padding-top: 10px;
+  font-weight: none;
+  margin-left: 60;
+}
+/* line 87, ../../app/stylesheets/screen.sass */
+#wrapper #curriculum h4 {
+  padding-top: 10px;
+  margin-left: 90;
+}
+/* line 90, ../../app/stylesheets/screen.sass */
+#wrapper #curriculum h4.assessment_limit {
+  font-style: italic;
+  padding-top: 0px;
+  margin-left: 110;
+}
+/* line 97, ../../app/stylesheets/screen.sass */
 #wrapper form, #wrapper #navigation {
   text-align: center;
 }
-/* line 71, ../../app/stylesheets/screen.sass */
+/* line 100, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set, #wrapper #navigation .button_set {
   text-align: left;
   display: none;
@@ -2152,38 +2187,38 @@ body {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 106, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set#states, #wrapper #navigation .button_set#states {
   background-color: FF7700;
 }
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 108, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set#grades, #wrapper #navigation .button_set#grades {
   background-color: FFBC08;
 }
-/* line 82, ../../app/stylesheets/screen.sass */
+/* line 111, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set .label, #wrapper #navigation .button_set .label {
   width: 120px;
   text-align: right;
   display: inline-block;
 }
-/* line 87, ../../app/stylesheets/screen.sass */
+/* line 116, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-button, #wrapper #navigation .button_set label.ui-button {
   background-color: inherit;
   border: 0px;
 }
-/* line 90, ../../app/stylesheets/screen.sass */
+/* line 119, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-state-default, #wrapper #navigation .button_set label.ui-state-default {
   color: 000;
 }
-/* line 92, ../../app/stylesheets/screen.sass */
+/* line 121, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-state-hover, #wrapper #navigation .button_set label.ui-state-hover {
   color: 666666;
 }
-/* line 94, ../../app/stylesheets/screen.sass */
+/* line 123, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-state-active, #wrapper #navigation .button_set label.ui-state-active {
   color: fff;
 }
-/* line 96, ../../app/stylesheets/screen.sass */
+/* line 125, ../../app/stylesheets/screen.sass */
 #wrapper form .button_set label.ui-focus-active, #wrapper #navigation .button_set label.ui-focus-active {
   color: fff;
 }
