@@ -1,0 +1,23 @@
+-@state_standards.group_by(&:level_0).each do |level_0, rest|
+  -unless level_0[1].blank?
+    %ul
+      %li
+        %h1
+          =level_0[1]
+        -rest.group_by(&:level_1).each do |level_1, rest|
+          %ul 
+            %li
+              %h2
+                =level_1[1]
+              -rest.group_by(&:level_2).each do |level_2, rest|
+                %ul
+                  %li
+                    %h3
+                      %b="#{level_2[0]}. "
+                      =level_2[1]
+                    -rest.group_by(&:level_3_array).each do |level_3_array, rest|
+                      %ul
+                        -level_3_array.each do |level_3|
+                          %li
+                            %h3
+                              =level_3

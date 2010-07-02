@@ -6,6 +6,9 @@
   %meta{:name => "description", :content => "UTF-8" }
   = stylesheet_link_merged(:base)
   = javascript_include_merged(:base) 
+<<<<<<< HEAD
+
+=======
   = stylesheet_link_tag 'screen.css'
   = javascript_include_tag 'jquery'
   = javascript_include_tag 'http://use.typekit.com/yuw6qmk.js'
@@ -16,6 +19,7 @@
     google.load("jquery", "1.4.2");
     google.load("jqueryui", "1.8.2");
     try{Typekit.load();}catch(e){};
+>>>>>>> not_restful
 %body
   #wrapper
     #top_nav

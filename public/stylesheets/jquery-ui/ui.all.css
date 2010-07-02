@@ -803,12 +803,12 @@ button.ui-button::-moz-focus-inner {
  * To view and modify this theme, visit http://jqueryui.com/themeroller/ */
 /* line 10, ../../../app/stylesheets/jquery-ui/ui.theme.sass */
 .ui-widget {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: adelle-1, adelle-2;
   font-size: 1.1em;
 }
 /* line 14, ../../../app/stylesheets/jquery-ui/ui.theme.sass */
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: adelle-1, adelle-2;
   font-size: 1em;
 }
 

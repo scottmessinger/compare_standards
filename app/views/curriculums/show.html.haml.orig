@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+=current_user.admin
+
+%h1
+  =@state
+-@state_standards.group_by(&:grade).each do |grade, rest|
+  %h2
+  %p="Grade: #{grade}"
+  %h3
+  #browser.filetree.treeview
+    -rest.group_by(&:level_0).each do |level_0, rest|
+      %ul
+        %li
+          =level_0[0]
+          =level_0[1]
+          -rest.group_by(&:level_1).each do |level_1, rest|
+            %ul 
+              %li
+                =level_1[0]
+                =level_1[1]
+                -rest.group_by(&:level_2).each do |level_2, rest|
+                  %ul
+                    %li
+                      =level_2[0]
+                      =level_2[1]
+                      -rest.group_by(&:level_3).each do |level_3, rest|
+                        %ul
+                          %li
+                            =level_3[0]
+                            =level_3[1]
+                            -rest.group_by(&:level_4).each do |level_4, rest|
+                              %ul
+                                %li
+                                  ="Assessment Limit: "
+                                  =level_4[0]
+                                  =level_4[1]
+
+=======
 / =current_user.admin
 / 
 / %h1
@@ -34,3 +72,4 @@
 /                                   =level_4[0]
 /                                   =level_4[1]
 / 
+>>>>>>> not_restful

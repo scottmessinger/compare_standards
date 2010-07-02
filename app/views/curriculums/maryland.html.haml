@@ -1,0 +1,32 @@
+-@state_standards.group_by(&:level_0).each do |level_0, rest|
+  / .filetree.treeview
+  %ul
+    %li
+      %h1
+        ="#{level_0[0]}. "
+        =level_0[1]
+      -rest.group_by(&:level_1).each do |level_1, rest|
+        %ul 
+          %li
+            %h2
+              ="#{level_1[0]}. "
+              =level_1[1]
+            -rest.group_by(&:level_2).each do |level_2, rest|
+              %ul
+                %li
+                  %h3
+                    ="#{level_2[0]}. "
+                    =level_2[1]
+                  -rest.group_by(&:level_3).each do |level_3, rest|
+                    %ul
+                      %li
+                        %h4
+                          ="#{level_3[0]}. "
+                          =level_3[1]
+                        -rest.group_by(&:level_4).each do |level_4, rest|
+                          -unless level_4[0].empty?
+                            %ul
+                              %li
+                                %h4.assessment_limit
+                                  ="Assessment Limit: "
+                                  =level_4[0]

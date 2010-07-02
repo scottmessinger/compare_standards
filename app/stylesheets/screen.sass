@@ -7,13 +7,24 @@
 @import compass/reset
 @import 960/grid.sass
 @import jquery-ui/ui.all.sass
+@import compass/css3/border-radius
+
+!state_bg_color = 'FF7700'
+!grade_bg_color = 'FFBC08'
+!hover_color = '666666'
+!default_color = '000'
+!active_color = 'fff'
+!focus_color = 'fff'
 html
 	background-color: inherit
 	height: 100%
 
 body
 	height: 100%
-	font-family: Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
+	font-family: "museo-sans-1","museo-sans-2"
+	font-weight: 100
+
+	// font-family: Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
 	font-size: 18px
 	background-color: #b0b0b0
 
@@ -28,13 +39,96 @@ body
 	-moz-box-shadow: 0 0 30px #666666
 	-webkit-box-shadow: 0 0 30px #666666
 	box-shadow: 0 0 30px #666666
+	
+	#top_nav
+		.title
+			font-size: 60px
+			text-align: center
+			padding-top: 20px
+			font-family: "adelle-1","adelle-2"
+		
+		.control_bar
+			font-size: 30px
+			font-weight: 100
+			text-align: center
+			padding-top: 20px
+			span
+
+				&#grade, &#state
+					padding: 10px 5px 5px 5px
+					cursor: pointer
+					+border-radius(10px)
+				&#grade
+					background-color: !grade_bg_color
+					&.hidden
+						color: !grade_bg_color
+				
+				&#state
+					background-color: !state_bg_color
+					&.hidden
+						color: !state_bg_color
+				
+	!indent_multiple = 10			
+	#curriculum
+		.waiting
+			text-align: center
+			font-family: "museo-sans-1","museo-sans-2"
+			font-size: 60px
+			padding-top: 50px
+		h1
+			font-family: "museo-sans-1","museo-sans-2"
+			text-transform: uppercase
+			font-weight: bold
+			padding-top: 30px
+			border-bottom: 1px !default_color solid
+		h2
+			padding-top: 10px
+			text-transform: none
+			font-weight: bold
+			margin-left: !indent_multiple * 3
+		h3
+			padding-top: 10px
+			font-weight: none
+			margin-left: !indent_multiple * 6
+		h4
+			padding-top: 10px
+			margin-left: !indent_multiple * 9
+		h4.assessment_limit
+			:font-style italic
+			padding-top: 0px
+			margin-left: !indent_multiple * 11
+			
+				
+				
 	form, #navigation
-		padding: 40px
 		text-align: center
+
 		.button_set
 			text-align: left
+			display: none
+			position: absolute
+			padding: 10px
+			+border-radius(10px)
+			&#states
+				background-color: !state_bg_color
+			&#grades
+				background-color: !grade_bg_color
+				
 			.label
 				width: 120px
 				text-align: right
 				display: inline-block
+			label
+				&.ui-button
+					background-color: inherit
+					border: 0px
+				&.ui-state-default
+					color: !default_color
+				&.ui-state-hover
+					color: !hover_color
+				&.ui-state-active
+					color: !active_color
+				&.ui-focus-active
+					color: !focus_color
+					
 /** NAVIGATION AREA *

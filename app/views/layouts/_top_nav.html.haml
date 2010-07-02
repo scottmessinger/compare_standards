@@ -1,0 +1,139 @@
+:javascript
+
+  $(function()
+    {
+      // Function to disable selection. Used in the control bar
+      $.fn.disableSelection = function() {
+          $(this).attr('unselectable', 'on')
+                 .css('-moz-user-select', 'none')
+                 .each(function() { 
+                     this.onselectstart = function() { return false; };
+                  });
+      };
+
+      // disable selection of control bar
+      $(".control_bar").disableSelection();
+    
+    
+      //jqueryui to create buttonsets
+      $("#grades").buttonset();
+      $("#states").buttonset();
+      $("#filters").buttonset();
+      
+      // submit data when option button is clicked.
+      
+      $(':radio').change(function(){
+          if ($('input[name=state]:checked').val() != null){
+            $('#curriculum').fadeOut("slow").hide().html("<div class='waiting'>I'm thinking...</div>").fadeIn("slow").fadeOut("slow",  
+              function(){$.post("/curriculums/show", $('form').serialize(), function(data) {
+                        $('#curriculum').hide().html(data).fadeIn("slow");
+                        })
+                     }
+              );
+          }
+      });
+      
+
+      
+      
+      //handle events when user clicks state option box
+      $("input[name=state]:radio").each(function(i){
+            $(this).click(function(){
+                  $("#state").text(
+                    $("label[for="+$(this).attr('id')+"]").text()
+                  );
+                  $("#states.button_set").toggle();
+                  $("#state").removeClass('hidden');
+              });
+        });
+        
+      //handle events when user clicks grade option box
+      $("input[name=grade]:radio").each(function(i){
+            $(this).click(function(){
+                  $("#grade").text(
+                    $("label[for="+$(this).attr('id')+"]").text()
+                  );
+                  $("#grades.button_set").toggle();
+                  $("#grade").removeClass('hidden');
+              });
+      });
+      
+      // handle events when clicks State
+      $("#state").click(function(){
+        if ($("#grades:visible")){
+          $("#grades").hide();
+          $("#grade").removeClass('hidden');
+        }
+        var pos = $(this).position();
+        var width = $(this).width();
+        var button_set_width = $("#states").width()
+        var button_left = width/2 + pos.left - button_set_width/2;
+        $("#states").css('left', button_left + 'px').toggle();
+        $(this).toggleClass('hidden')
+      });
+
+      //handle events when user clicks Grade
+      $("#grade").click(function(){
+        if ($("#states:visible")){
+          $("#states").hide();
+          $("#state").removeClass('hidden');
+        }
+        var pos = $(this).position();
+        var width = $(this).width();
+        var button_set_width = $("#grades").width()
+        var button_left = width/2 + pos.left - button_set_width/1.5;
+        $("#grades").css('left', button_left + 'px').toggle();
+        $(this).toggleClass('hidden');
+      });
+      
+      
+    });
+
+
+
+
+.title.tk-adelle
+  Compare Standards
+
+.control_bar
+  I want to view
+  %span#state.select_button
+    %i> choose state
+  math standards for 
+  %span#grade.select_button
+    %i> choose grade
+  grade. 
+-form_for :curriculum, :html => {:id => "navigation"}, :url => {:action => "show"} do
+  #grades.button_set
+    %input{:type => 'radio', :name => 'grade', :id => 'K', :value => 'K'}
+    %label{:for => 'K'} K
+    %input{:type => 'radio', :name => 'grade', :id => '1', :value => '1'}
+    %label{:for => '1'} 1st
+    %input{:type => 'radio', :name => 'grade', :id => '2', :value => '2'}
+    %label{:for => '2'} 2nd
+    %input{:type => 'radio', :name => 'grade', :id => '3', :value => '3'}
+    %label{:for => '3'} 3rd
+    %input{:type => 'radio', :name => 'grade', :id => '4', :value => '4'}
+    %label{:for => '4'} 4th
+    %input{:type => 'radio', :name => 'grade', :id => '5', :value => '5'}
+    %label{:for => '5'} 5th
+    %input{:type => 'radio', :name => 'grade', :id => '6', :value => '6'}
+    %label{:for => '6'} 6th
+    %input{:type => 'radio', :name => 'grade', :id => '7', :value => '7'}
+    %label{:for => '7'} 7th
+    %input{:type => 'radio', :name => 'grade', :id => '8', :value => '8'}
+    %label{:for => '8'} 8th
+  #states.button_set
+    %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core', :label => 'Common Core'}
+    %label{:for => 'common'}Common Core
+    %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland', :label => 'Maryland'}
+    %label{:for => 'maryland'} Maryland
+
+  #filters.button_set
+    .label
+      
+    /   %input{:type => 'radio', :name => 'filter', :id => 'stand_alone', :value => 'stand_alone'}
+    /   %label{:for => 'stand_alone'} By Itself
+    %input{:type => 'checkbox', :name => 'filter', :id => 'comparison', :value => 'comparison'}
+    %label{:for => 'comparison'} Compare Standards!
+
