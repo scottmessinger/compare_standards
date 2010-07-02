@@ -7,3 +7,4 @@ oauth
 ezcrypto
 compass-960-plugin
 bson_ext
+json --version 1.4.3
