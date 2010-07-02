@@ -23,11 +23,18 @@
       // submit data when option button is clicked.
       
       $(':radio').change(function(){
-          $('#curriculum').html("Waiting");
-          $.post("/curriculums/show", $('form').serialize(), function(data) {
-                 $('#curriculum').html(data);
-          });
+          if ($('input[name=state]:checked').val() != null){
+            $('#curriculum').fadeOut("slow").hide().html("<div class='waiting'>I'm thinking...</div>").fadeIn("slow").fadeOut("slow",  
+              function(){$.post("/curriculums/show", $('form').serialize(), function(data) {
+                        $('#curriculum').hide().html(data).fadeIn("slow");
+                        })
+                     }
+              );
+          }
       });
+      
+
+      
       
       //handle events when user clicks state option box
       $("input[name=state]:radio").each(function(i){
@@ -91,10 +98,10 @@
 .control_bar
   I want to view
   %span#state.select_button
-    choose state
-  standards for 
+    %i> choose state
+  math standards for 
   %span#grade.select_button
-    choose grade
+    %i> choose grade
   grade. 
 -form_for :curriculum, :html => {:id => "navigation"}, :url => {:action => "show"} do
   #grades.button_set
@@ -117,10 +124,11 @@
     %input{:type => 'radio', :name => 'grade', :id => '8', :value => '8'}
     %label{:for => '8'} 8th
   #states.button_set
-    %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland', :label => 'Maryland'}
-    %label{:for => 'maryland'} Maryland
     %input{:type => 'radio', :name => 'state', :id => 'common', :value => 'common_core', :label => 'Common Core'}
     %label{:for => 'common'}Common Core
+    %input{:type => 'radio', :name => 'state', :id => 'maryland', :value => 'maryland', :label => 'Maryland'}
+    %label{:for => 'maryland'} Maryland
+
   #filters.button_set
     .label
       
