@@ -2,6 +2,7 @@
 
   $(function()
     {
+      // Function to disable selection. Used in the control bar
       $.fn.disableSelection = function() {
           $(this).attr('unselectable', 'on')
                  .css('-moz-user-select', 'none')
@@ -10,19 +11,25 @@
                   });
       };
 
+      // disable selection of control bar
       $(".control_bar").disableSelection();
     
+    
+      //jqueryui to create buttonsets
       $("#grades").buttonset();
       $("#states").buttonset();
       $("#filters").buttonset();
-      $("#navigation").submit(function (){
-        $.post("/curriculums/show", $('form').serialize(), function(data) {
-               $('#curriculum').html(data);
-        });
-        return false;
+      
+      // submit data when option button is clicked.
+      
+      $(':radio').change(function(){
+          $('#curriculum').html("Waiting");
+          $.post("/curriculums/show", $('form').serialize(), function(data) {
+                 $('#curriculum').html(data);
+          });
       });
       
-      
+      //handle events when user clicks state option box
       $("input[name=state]:radio").each(function(i){
             $(this).click(function(){
                   $("#state").text(
@@ -33,6 +40,7 @@
               });
         });
         
+      //handle events when user clicks grade option box
       $("input[name=grade]:radio").each(function(i){
             $(this).click(function(){
                   $("#grade").text(
@@ -43,6 +51,7 @@
               });
       });
       
+      // handle events when clicks State
       $("#state").click(function(){
         if ($("#grades:visible")){
           $("#grades").hide();
@@ -56,6 +65,7 @@
         $(this).toggleClass('hidden')
       });
 
+      //handle events when user clicks Grade
       $("#grade").click(function(){
         if ($("#states:visible")){
           $("#states").hide();
@@ -71,9 +81,8 @@
       
       
     });
-/ $(':radio').change(
-/   $("#navigation").submit()
-/ );
+
+
 
 
 .title.tk-adelle
@@ -119,6 +128,4 @@
     /   %label{:for => 'stand_alone'} By Itself
     %input{:type => 'checkbox', :name => 'filter', :id => 'comparison', :value => 'comparison'}
     %label{:for => 'comparison'} Compare Standards!
-  %button.submit
-    Go!
 
